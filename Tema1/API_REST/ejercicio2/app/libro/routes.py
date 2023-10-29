@@ -2,7 +2,7 @@ from  utils.funciones import *
 
 from flask import Blueprint, jsonify, request
 
-rutaFicheroLibro = "app/ficheros/libro.json"
+rutaFicheroLibro = "Tema1/API_REST/ejercicio2/ficheros/libro.json"
 
 libroBP = Blueprint('libro', __name__)
 

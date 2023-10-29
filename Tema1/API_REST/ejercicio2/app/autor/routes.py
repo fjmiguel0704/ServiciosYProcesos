@@ -2,8 +2,8 @@ from  utils.funciones import *
 
 from flask import Blueprint, jsonify, request
 
-rutaFicheroAutor = "app/ficheros/autor.json"
-rutaFicheroLibro = "app/ficheros/libro.json"
+rutaFicheroAutor = "Tema1/API_REST/ejercicio2/ficheros/autor.json"
+rutaFicheroLibro = "Tema1/API_REST/ejercicio2/ficheros/libro.json"
 
 autorBP = Blueprint('autor', __name__)
 

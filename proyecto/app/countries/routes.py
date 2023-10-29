@@ -3,7 +3,7 @@ from proyecto.utils.funciones import leeFichero
 from utils.funciones import *
 
 from flask import Blueprint, jsonify, request
-
+ 
 ficheroCountries = "../proyecto/ficheros/countries.json"
 ficheroCities = "../proyecto/ficheros/cities.json"
 
