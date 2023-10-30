@@ -1,9 +1,9 @@
-from  Tema1.API_REST.ejercicio2.utils.funciones import *
+from  app.funciones.funciones import *
 
 from flask import *
 
-rutaFicheroAutor = "SERVICIOSYPROCESOS/Tema1/API_REST/ejercicio2/ficheros/autor.json"
-rutaFicheroLibro = "SERVICIOSYPROCESOS/Tema1/API_REST/ejercicio2/ficheros/libro.json"
+rutaFicheroAutor = "../ejercicio2/ficheros/autor.json"
+rutaFicheroLibro = "../ejercicio2/ficheros/libro.json"
 
 autorBP = Blueprint('autor', __name__)
 
@@ -29,7 +29,7 @@ def get_autor():
 
 @autorBP.get("/<int:id>")
 # Funcion que devuelve un autor
-def get_autor(id):
+def get_autorId(id):
     autores = leeFichero(rutaFicheroAutor)
     # Recorremos los autores en la lista autores
     for autor in autores:

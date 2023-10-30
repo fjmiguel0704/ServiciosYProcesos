@@ -1,4 +1,5 @@
-from flask import *
+from flask import Flask
+
 from .autor.routes import autorBP
 from .libro.routes import libroBP
 

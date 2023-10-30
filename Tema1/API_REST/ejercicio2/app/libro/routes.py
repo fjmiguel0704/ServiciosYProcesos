@@ -1,8 +1,8 @@
-from  Tema1.API_REST.ejercicio2.utils.funciones import *
+from  app.funciones.funciones import *
 
 from flask import *
 
-rutaFicheroLibro = "SERVICIOSYPROCESOS/Tema1/API_REST/ejercicio2/ficheros/libro.json"
+rutaFicheroLibro = "../ejercicio2/ficheros/libro.json"
 
 libroBP = Blueprint('libro', __name__)
 
@@ -28,7 +28,7 @@ def get_libro():
 
 @libroBP.get("/<int:id>")
 # Funcion que devuelve un libro 
-def get_libro(id):
+def get_libroId(id):
     libros = leeFichero(rutaFicheroLibro)
     # Recorremos los libros en la lista libros
     for libro in libros:
