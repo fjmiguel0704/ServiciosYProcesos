@@ -4,5 +4,5 @@ from .libro.routes import libroBP
 
 app = Flask(__name__)
 
-app.register_blueprint(autorBP, url_prefix='autores')
-app.register_blueprint(libroBP, url_prefix='libros')
+app.register_blueprint(autorBP, url_prefix="/autor")
+app.register_blueprint(libroBP, url_prefix="/libro")
