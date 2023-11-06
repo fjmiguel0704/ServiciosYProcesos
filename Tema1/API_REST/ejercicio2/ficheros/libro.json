@@ -1,7 +1,1 @@
-[
-    {"id": 1, 
-    "isbn": "0-7654-2641-3", 
-    "titulo": "Quijote", 
-    "numPaginas": "200", 
-    "idAutor": 1}
-]
+[{"id": 1, "isbn": "0-7654-2641-3", "titulo": "Quijote", "numPaginas": "200", "idAutor": 1}, {"isbn": "1-7654-2641-3", "numPaginas": "100", "titulo": "Trolla", "id": 2, "idAutor": 2}]
