@@ -1,3 +1,4 @@
+from flask_jwt_extended import jwt_required
 from  app.funciones.funciones import *
 
 from flask import *
@@ -41,6 +42,7 @@ def get_autorId(id):
     return {"error": "Autor not found"}, 404
 
 @autorBP.post("/")
+@jwt_required()
 # Funcion agregar autor
 def add_autor():
     autores = leeFichero(rutaFicheroAutor)
@@ -60,6 +62,7 @@ def add_autor():
 
 @autorBP.put("/<int:id>")
 @autorBP.patch("/<int:id>")
+@jwt_required()
 # Funcion para modificar un autor
 def modify_autor(id):
     autores = leeFichero(rutaFicheroAutor)
@@ -80,6 +83,7 @@ def modify_autor(id):
     return {"error": "Request must be JSON"}, 415
 
 @autorBP.delete("/<int:id>")
+@jwt_required()
 # Funcion que elimina un recurso
 def delete_autor(id):
     autores = leeFichero(rutaFicheroAutor)

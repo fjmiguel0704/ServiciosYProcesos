@@ -1,3 +1,4 @@
+from flask_jwt_extended import jwt_required
 from  app.funciones.funciones import *
 
 from flask import *
@@ -40,6 +41,7 @@ def get_libroId(id):
     return {"error": "Libro not found"}, 404
 
 @libroBP.post("/")
+@jwt_required()
 # Funcion agregar libro
 def add_libro():
     libros = leeFichero(rutaFicheroLibro)
@@ -59,6 +61,7 @@ def add_libro():
 
 @libroBP.put("/<int:id>")
 @libroBP.patch("/<int:id>")
+@jwt_required()
 # Funcion para modificar un libro
 def modify_libro(id):
     libros = leeFichero(rutaFicheroLibro)
@@ -79,6 +82,7 @@ def modify_libro(id):
     return {"error": "Request must be JSON"}, 415
 
 @libroBP.delete("/<int:id>")
+@jwt_required()
 # Funcion que elimina un recurso
 def delete_libro(id):
     libros = leeFichero(rutaFicheroLibro)
