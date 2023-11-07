@@ -2,6 +2,10 @@ from funciones import *
 url = "https://jsonplaceholder.typicode.com/posts"
 opcion = 1
 
+token = "token_creado"
+cabecera = {"Authorization": "Bearer" + token}
+response = requests.get(url, headers=cabecera)
+
 while opcion!=0:
     print ("Selecciona una opción")
     print ("1. Mostrar todas las publicaciones")
