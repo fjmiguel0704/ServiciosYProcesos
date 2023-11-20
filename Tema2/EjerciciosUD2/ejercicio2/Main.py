@@ -1,14 +1,16 @@
 from SumaRecorreNumeros import sumaNumeros
 from multiprocessing import *
+import time
 
 if __name__ == "__main__":
-    process1 = Process(target=sumaNumeros, args=(10,20))
-    process2 = Process(target=sumaNumeros, args=(15,5))
-    process3 = Process(target=sumaNumeros, args=(5,10))
-    process1.start()
-    process2.start()
-    process3.start()
-    process1.join()
-    process2.join()
-    process3.join()
+    inicio = time.time()
+    pool = Pool(processes=3)
+    numero = [(3, ), (4, ), (5, )]
+
+    resultado = pool.starmap(sumaNumeros, numero)
+
+    pool.close
+    fin = time.time()
+    print(resultado)
     print("Todos los procesos han terminado")
+    print(fin - inicio)
