@@ -1,7 +1,7 @@
 import bcrypt
 from flask import *
 from flask_jwt_extended import create_access_token 
-from app.utls.functions import *
+from utls.functions import *
 
 rutaFicheroUsuarios = "app/ficheros/users.json"
 

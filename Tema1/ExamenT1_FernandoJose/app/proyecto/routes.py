@@ -1,6 +1,6 @@
 from flask import *
 from flask_jwt_extended import jwt_required
-from app.utls.functions import *
+from utls.functions import *
 
 rutaFicheroProyecto = "app/ficheros/proyecto.json"
 rutaFicheroDepartamento = "app/ficheros/departamento.json"
